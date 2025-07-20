@@ -7,12 +7,14 @@ import image from "./assets/example.jpg";
 import Table from "./components/table/Table";
 import Br from "./Br";
 import NavbarExample from "./components/navbar/NavbarExample";
+import Footer from "./components/footer/Footer";
 
 function App() {
 	return (
 		<>
 			<NavbarExample logo={reactLogo} />
-			<section className="flex gap-5">
+			<h1 className="text-2xl text-center mt-5">Components Button</h1>
+			<section className="flex gap-5 justify-center">
 				<Button text={"submit"} />
 				<Button text={"delete"} color="red" />
 				<Button text={"click"} color="blue" />
@@ -34,6 +36,7 @@ function App() {
 				<section></section>
 			</div>
 			<Br />
+			<Footer />
 		</>
 	);
 }
