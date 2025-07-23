@@ -1,6 +1,9 @@
-import Card from '../components/card/Card'
+import Card from "../components/card/Card";
+import { useContext } from "react";
+import { AppContext } from "../Context/Context";
 
-export default function ProjectsPage({ image }) {
+export default function ProjectsPage() {
+	const { image } = useContext(AppContext);
 	return (
 		<>
 			<div className="flex flex-col gap-10">

@@ -22,8 +22,8 @@ import NotFoundPage from "./pages/NotFoundPage";
 function App() {
 	const dataImage = {
 		logo: reactLogo,
-		image: ImageExample
-	}
+		image: ImageExample,
+	};
 
 	return (
 		<>
@@ -36,7 +36,7 @@ function App() {
 						<Route path="/about" element={<AboutPage />} />
 						<Route path="/login" element={<LoginPage />} />
 						<Route path="/profile" element={<ProfilePage />} />
-						<Route path="/projects" element={<ProjectsPage image={ImageExample} />} />
+						<Route path="/projects" element={<ProjectsPage />} />
 						<Route path="*" element={<NotFoundPage />} />
 					</Routes>
 				</div>
