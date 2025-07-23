@@ -1,41 +1,38 @@
-import Button from "./components/button/Button";
-import Navbar from "./components/navbar/Navbar";
-import Card from "./components/card/card";
+import { Routes, Route } from "react-router";
 
+//assests
 import reactLogo from "./assets/react.svg";
-import image from "./assets/example.jpg";
-import Table from "./components/table/Table";
-import Br from "./Br";
+import ImageExample from "./assets/example.jpg"
+
+//components
 import NavbarExample from "./components/navbar/NavbarExample";
 import Footer from "./components/footer/Footer";
+
+// Pages
+import DashboardPage from "./pages/DashboardPage";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import ProfilePage from "./pages/ProfilePage";
+import ProjectsPage from "./pages/ProjectsPage";
+import AboutPage from "./pages/AboutPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
 	return (
 		<>
 			<NavbarExample logo={reactLogo} />
-			<h1 className="text-2xl text-center mt-5">Components Button</h1>
-			<section className="flex gap-5 justify-center">
-				<Button text={"submit"} />
-				<Button text={"delete"} color="red" />
-				<Button text={"click"} color="blue" />
-			</section>
-			<div className="flex flex-col gap-10">
-				<section className="grid lg:grid-cols-3 grid-cols-1 m-auto lg:gap-20 gap-10">
-					<Card cardPict={image} />
-					<Card cardPict={image} />
-					<Card cardPict={image} />
-					<Card cardPict={image} />
-					<Card cardPict={image} />
-				</section>
-				<section>
-					<Table />
-				</section>
+			<div className="min-h-142 lg:p-20 p-10 ">
+				<Routes>
+					<Route path="/" element={<HomePage />} />
+					<Route path="/dashboard" element={<DashboardPage />} />
+					<Route path="/about" element={<AboutPage />} />
+					<Route path="/login" element={<LoginPage />} />
+					<Route path="/profile" element={<ProfilePage />} />
+					<Route path="/projects" element={<ProjectsPage image={ImageExample} />} />
+					<Route path="*" element={<NotFoundPage />} />
+				</Routes>
 			</div>
 
-			<div>
-				<section></section>
-			</div>
-			<Br />
 			<Footer />
 		</>
 	);

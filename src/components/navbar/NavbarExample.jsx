@@ -1,24 +1,31 @@
+import { Link } from "react-router";
+
 export default function NavbarExample({ logo }) {
 	return (
 		<>
 			<header className="w-full sm:h-12 lg:h-17 h-13 flex justify-between bg-blue-700">
 				<div className="flex my-auto gap-3">
 					<img src={logo} alt="logo" className="lg:h-12 h-8 cursor-pointer" />
-					<a className="lg:text-2xl text-base my-auto text-white cursor-pointer ">Navbar</a>
+					<Link className="lg:text-2xl text-base my-auto text-white cursor-pointer " to={"/"}>
+						Navbar
+					</Link>
 				</div>
 
-				<ul className="flex gap-5 my-auto text-white">
+				<ul className="lg:flex hidden lg:flex-row flex-col gap-5 my-auto text-white">
 					<li className="hover:opacity-70 active:scale-80 lg:text-lg text-xs">
-						<a href="#">Dashboard</a>
+						<Link to="/dashboard">Dashboard</Link>
 					</li>
 					<li className="hover:opacity-70 active:scale-80 lg:text-lg text-xs">
-						<a href="#">About</a>
+						<Link to="/about">About</Link>
 					</li>
 					<li className="hover:opacity-70 active:scale-80 lg:text-lg text-xs">
-						<a href="#">Profile</a>
+						<Link to="/Profile">Profile</Link>
 					</li>
 					<li className="hover:opacity-70 active:scale-80 lg:text-lg text-xs">
-						<a href="#">Projects</a> &nbsp;
+						<Link to="/projects">Projects</Link>
+					</li>
+					<li className="hover:opacity-70 active:scale-80 lg:text-lg text-xs">
+						<Link to="/login">Sign In</Link> &nbsp;
 					</li>
 				</ul>
 			</header>
