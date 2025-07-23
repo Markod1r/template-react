@@ -1,6 +1,9 @@
 import { Link } from "react-router";
+import { useContext } from "react";
+import { AppContext } from "../../Context/Context";
 
-export default function NavbarExample({ logo }) {
+export default function NavbarExample() {
+	const { logo } = useContext(AppContext);
 	return (
 		<>
 			<header className="w-full sm:h-12 lg:h-17 h-13 flex justify-between bg-blue-700">
