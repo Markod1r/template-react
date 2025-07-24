@@ -31,7 +31,7 @@ export default function NavbarExample() {
 						<Link to="/projects">Projects</Link>
 					</li>
 					<li className="hover:opacity-70 active:scale-80 lg:text-lg text-xs">
-						<Link to="/login">Sign In</Link> &nbsp;
+						<Link to="/form">Sign In</Link> &nbsp;
 					</li>
 				</ul>
 			</header>

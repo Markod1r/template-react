@@ -13,13 +13,16 @@ import Footer from "./components/footer/Footer";
 // Pages
 import DashboardPage from "./pages/DashboardPage";
 import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
 import Projects from "./pages/projects/Projects";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Project from "./pages/projects/Project";
 import ProjectLayout from "./pages/projects/ProjectLayout";
+import FormLayout from "./pages/form/FormLayout";
+import Form from "./pages/form/Form";
+import Login from "./pages/form/Login";
+import Register from "./pages/form/Register";
 
 function App() {
 	const dataContext = {
@@ -37,7 +40,7 @@ function App() {
 						<Route path="/dashboard" element={<DashboardPage />} />
 						<Route path="/about" element={<AboutPage />} />
 						<Route path="/form" element={<FormLayout />}>
-							<Route index element={<LoginPage />} />
+							<Route index element={<Form />} />
 							<Route path="login" element={<Login />} />
 							<Route path="register" element={<Register />} />
 						</Route>
