@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "image" : "./example.jpg",
+        "title": "Web SMA",
+        "paragraph": "website SMA CRUD"
+    },
+    {
+        "id": 2,
+        "image": "./example.jpg",
+        "title": "Web SDN",
+        "paragraph": "Website SDN CRUD"
+    },
+    {
+        "id": 3,
+        "image": "./example.jpg",
+        "title": "Templates React",
+        "paragraph": "Template Web dengan style Tailwindcss"
+    },
+    {
+        "id": 4,
+        "image": "./example.jpg",
+        "title": "Music Finder",
+        "paragraph": "Website untuk mencari lagu lagu di iTunes"
+    }
+]

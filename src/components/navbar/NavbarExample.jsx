@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { useContext } from "react";
 import { AppContext } from "../../Context/Context";
 
@@ -19,19 +19,19 @@ export default function NavbarExample() {
 
 				<ul className="lg:flex hidden lg:flex-row flex-col gap-5 my-auto text-white">
 					<li className="hover:opacity-70 active:scale-80 lg:text-lg text-xs">
-						<Link to="/dashboard">Dashboard</Link>
+						<NavLink to="/dashboard">Dashboard</NavLink>
 					</li>
 					<li className="hover:opacity-70 active:scale-80 lg:text-lg text-xs">
-						<Link to="/about">About</Link>
+						<NavLink to="/about">About</NavLink>
 					</li>
 					<li className="hover:opacity-70 active:scale-80 lg:text-lg text-xs">
-						<Link to="/Profile">Profile</Link>
+						<NavLink to="/Profile">Profile</NavLink>
 					</li>
 					<li className="hover:opacity-70 active:scale-80 lg:text-lg text-xs">
-						<Link to="/projects">Projects</Link>
+						<NavLink to="/projects">Projects</NavLink>
 					</li>
 					<li className="hover:opacity-70 active:scale-80 lg:text-lg text-xs">
-						<Link to="/form">Sign In</Link> &nbsp;
+						<NavLink to="/form">Sign In</NavLink> &nbsp;
 					</li>
 				</ul>
 			</header>

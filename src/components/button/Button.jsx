@@ -16,7 +16,7 @@ export default function Button({ text, onClick, color = "green" }) {
 			break;
 	}
 	return (
-		<button href="#" className={buttonColor} onClick={onClick}>
+		<button className={buttonColor} onClick={onClick}>
 			<b>{text}</b>
 		</button>
 	);

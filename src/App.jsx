@@ -17,17 +17,27 @@ import ProfilePage from "./pages/ProfilePage";
 import Projects from "./pages/projects/Projects";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import Project from "./pages/projects/Project";
 import ProjectLayout from "./pages/projects/ProjectLayout";
 import FormLayout from "./pages/form/FormLayout";
 import Form from "./pages/form/Form";
 import Login from "./pages/form/Login";
 import Register from "./pages/form/Register";
+import ProjectSearch from "./pages/projects/ProjectSearch";
+
+let id = 0;
+const dataProjects = [
+	{
+		id: id++,
+		title: "project 1",
+		paragraph: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus labore perspiciatis quibusdam totam numquam autem.`,
+	},
+];
 
 function App() {
 	const dataContext = {
 		logo: reactLogo,
 		image: ImageExample,
+		projects: dataProjects,
 	};
 
 	return (
@@ -47,8 +57,9 @@ function App() {
 						<Route path="/profile" element={<ProfilePage />} />
 						<Route path="/projects" element={<ProjectLayout />}>
 							<Route index element={<Projects />} />
-							<Route path="project" element={<Project />} />
+							<Route path="search" element={<ProjectSearch />} />
 						</Route>
+						{/* <Route path="projects/:id" element={<ProjectDetail />} /> */}
 						<Route path="*" element={<NotFoundPage />} />
 					</Routes>
 				</div>

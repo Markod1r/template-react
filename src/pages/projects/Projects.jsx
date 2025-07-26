@@ -1,16 +1,27 @@
+import { useEffect, useState } from "react";
 import Card from "../../components/card/Card";
-import { useContext } from "react";
-import { AppContext } from "../../Context/Context";
+import { useImmer } from "use-immer";
 
 export default function Projects() {
-	const { image } = useContext(AppContext);
+	const [load, setLoad] = useState(true);
+	const [projects, setProjects] = useImmer([]);
+
+	useEffect(() => {
+		if (load) {
+			fetch("/projects.json")
+				.then((response) => response.json())
+				.then((data) => {
+					setProjects(data);
+					setLoad(false);
+				});
+		}
+	}, []);
+	console.log(projects);
 	return (
 		<>
-			<Card cardPict={image} />
-			<Card cardPict={image} />
-			<Card cardPict={image} />
-			<Card cardPict={image} />
-			<Card cardPict={image} />
+			{projects.map((data, index) => {
+				return <Card key={index} title={data.title} paragraph={data.paragraph} />;
+			})}
 		</>
 	);
 }
