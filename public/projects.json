@@ -22,5 +22,11 @@
         "image": "./example.jpg",
         "title": "Music Finder",
         "paragraph": "Website untuk mencari lagu lagu di iTunes"
+    },
+    {
+        "id": 5,
+        "image": "./example.jpg",
+        "title": "Lorem",
+        "paragraph": "aku anak hebat tubuh ku cacat, aku anak sehat rajin menabung, indonesia tanah air ku tanah tumpah darah ku"
     }
 ]
