@@ -8,7 +8,7 @@ export default function NavbarExample() {
 
 	return (
 		<>
-			<header className="w-full sm:h-12 lg:h-17 h-13 bg-white sticky top-0 flex justify-between opacity-80" >
+			<header className="w-full sm:h-12 lg:h-17 h-13 bg-white flex justify-between opacity-80" >
 				<div className="flex my-auto gap-3">
 					<img
 						src={logo}
