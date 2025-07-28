@@ -1,17 +1,22 @@
-import Button from "../button/Button";
+import Button from "../button/PrimaryButton";
 
-export default function Card({
-	image,
-	title = "Title",
-	paragraph = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, similique.",
-}) {
+export default function Card({ image, title = "T", paragraph = "p" }) {
 	return (
-		<div className="bg-gray-700 rounded-xl lg:w-85 w-65 lg:h-auto h-auto shadow-xl/30 lg:m-2 m-auto text-white text-shadow-md">
-			<img src={image} alt="" className="w-auto rounded-t-lg" />
-			<div className="m-6">
-				<h1 className="lg:text-3xl text-2xl mb-3">{title}</h1>
-				<p className="lg:text-base text-sm">{paragraph}</p>
-				<Button text={"visit"} />
+		<div
+			className={
+				"bg-white rounded-xl lg:w-85 w-65 lg:h-auto h-auto shadow-xl/30 m-auto p-3 text-black text-shadow-md"
+			}
+		>
+			<img
+				src={image}
+				alt=""
+				className="w-78 lg:h-55 h-40 object-cover mx-auto rounded-xl hover:rotate-3 transition-all "
+			/>
+			<div className="mx-5">
+				<h1 className="lg:text-4xl text-2xl my-4 hover:rotate-5 transform transition-all">
+					{title}
+				</h1>
+				<p className="lg:text-base text-sm mb-3">{paragraph}</p>
 			</div>
 		</div>
 	);

@@ -11,21 +11,17 @@ export default function Projects() {
 			.then((data) => {
 				setProjects(data);
 			});
-	}, []);
-	console.log(projects);
+	}, [setProjects]);
 	return (
 		<>
-			{projects.map((data, index) => {
-				return (
-					<Card
-						image={data.image}
-						key={index}
-						title={data.title}
-						paragraph={data.paragraph}
-						cardColor={`gray`}
-					/>
-				);
-			})}
+			{projects.map((data, index) => (
+				<Card
+					image={data.image}
+					key={index}
+					title={data.title}
+					paragraph={data.paragraph}
+				/>
+			))}
 		</>
 	);
 }

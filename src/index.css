@@ -5,6 +5,10 @@
 	}
 }
 
+body{
+	@apply bg-blue-50
+}
+
 a.active {
-	opacity: 50%;
+	@apply opacity-70;
 }

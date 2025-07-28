@@ -4,67 +4,39 @@ import { AppContext } from "./Context/Context";
 
 //assests
 import reactLogo from "./assets/react.svg";
-import ImageExample from "./assets/example.jpg";
+import Image from "./assets/example.jpg";
+import car from "./assets/car.jpg";
 
-//components
-import NavbarExample from "./components/navbar/NavbarExample";
-import Footer from "./components/footer/Footer";
+//Layouts
+import HomeLayout from "./pages/users/home/HomeLayout";
+import LoginLayout from "./pages/users/login/LoginLayout";
 
 // Pages
-import DashboardPage from "./pages/DashboardPage";
-import HomePage from "./pages/HomePage";
-import ProfilePage from "./pages/ProfilePage";
-import Projects from "./pages/projects/Projects";
-import AboutPage from "./pages/AboutPage";
+import HomePage from "./pages/users/home/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
-import ProjectLayout from "./pages/projects/ProjectLayout";
-import FormLayout from "./pages/form/FormLayout";
-import Form from "./pages/form/Form";
-import Login from "./pages/form/Login";
-import Register from "./pages/form/Register";
-import ProjectSearch from "./pages/projects/ProjectSearch";
-
-let id = 0;
-const dataProjects = [
-	{
-		id: id++,
-		title: "project 1",
-		paragraph: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus labore perspiciatis quibusdam totam numquam autem.`,
-	},
-];
+import Login from "./pages/users/login/Login";
 
 function App() {
 	const dataContext = {
 		logo: reactLogo,
-		image: ImageExample,
-		projects: dataProjects,
+		image: Image,
+		car: car,
 	};
 
 	return (
 		<>
 			<AppContext.Provider value={dataContext}>
-				<NavbarExample logo={reactLogo} />
-				<div className="min-h-142 lg:p-20 p-10 ">
+				<div>
 					<Routes>
-						<Route path="/" element={<HomePage />} />
-						<Route path="/dashboard" element={<DashboardPage />} />
-						<Route path="/about" element={<AboutPage />} />
-						<Route path="/form" element={<FormLayout />}>
-							<Route index element={<Form />} />
-							<Route path="login" element={<Login />} />
-							<Route path="register" element={<Register />} />
+						<Route path="/" element={<HomeLayout />}>
+							<Route index element={<HomePage />}></Route>
 						</Route>
-						<Route path="/profile" element={<ProfilePage />} />
-						<Route path="/projects" element={<ProjectLayout />}>
-							<Route index element={<Projects />} />
-							<Route path="search" element={<ProjectSearch />} />
+						<Route path="/login" element={<LoginLayout/>}>
+							<Route index element={<Login/>} />
 						</Route>
-						{/* <Route path="projects/:id" element={<ProjectDetail />} /> */}
 						<Route path="*" element={<NotFoundPage />} />
 					</Routes>
 				</div>
-
-				<Footer />
 			</AppContext.Provider>
 		</>
 	);

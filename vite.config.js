@@ -9,7 +9,6 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				index: "index.html",
-				isolasi: 'index copy.html'
 			},
 		},
 	},

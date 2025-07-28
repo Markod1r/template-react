@@ -1,4 +1,5 @@
-import Button from "../../components/button/Button";
+import PrimaryButton from "../../../components/button/PrimaryButton";
+
 export default function Login() {
 	return (
 		<>
@@ -14,8 +15,9 @@ export default function Login() {
 						type="password"
 						placeholder="password"
 						className="text-xl focus:outline-0 focus:border-zinc-900 border-b-3 border-zinc-400 my-3"
-					/> <br/>
-					<Button text={"Login"} color="blue" />
+					/>
+					<br />
+					<PrimaryButton text={"Login"} color="blue" />
 				</form>
 			</section>
 		</>

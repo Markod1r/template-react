@@ -1,7 +1,5 @@
 export default function NotFoundPage() {
 	return (
-		<div className="w-full">
-			<h1 className="text-5xl">Not Found Page 😔</h1>
-		</div>
+			<h1 className="text-7xl text-center my-30 w-full">Page Not Found 😔</h1>
 	);
 }
