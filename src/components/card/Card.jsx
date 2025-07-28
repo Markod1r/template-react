@@ -1,8 +1,10 @@
-export default function Card({ image, title = "T", paragraph }) {
+import Button from "../button/PrimaryButton";
+
+export default function Card({ image, title = "T", paragraph = "p" }) {
 	return (
 		<div
 			className={
-				"bg-white rounded-xl lg:w-85 md:w-65 w-55 flex-shrink-0 h-auto shadow-xl/30 m-auto p-3 text-black text-shadow-md"
+				"bg-white rounded-xl lg:w-85 w-65 lg:h-auto h-auto shadow-xl/30 m-auto p-3 text-black text-shadow-md"
 			}
 		>
 			<img
@@ -14,7 +16,7 @@ export default function Card({ image, title = "T", paragraph }) {
 				<h1 className="lg:text-4xl text-2xl my-4 hover:rotate-5 transform transition-all">
 					{title}
 				</h1>
-				<p className="lg:text-base md:text-sm text-xs truncate mb-3">{paragraph}</p>
+				<p className="lg:text-base text-sm mb-3">{paragraph}</p>
 			</div>
 		</div>
 	);
