@@ -15,6 +15,7 @@ import LoginLayout from "./pages/users/login/LoginLayout";
 import HomePage from "./pages/users/home/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Login from "./pages/users/login/Login";
+import Register from "./pages/users/login/Register";
 
 function App() {
 	const dataContext = {
@@ -26,17 +27,16 @@ function App() {
 	return (
 		<>
 			<AppContext.Provider value={dataContext}>
-				<div>
 					<Routes>
 						<Route path="/" element={<HomeLayout />}>
 							<Route index element={<HomePage />}></Route>
 						</Route>
-						<Route path="/login" element={<LoginLayout/>}>
-							<Route index element={<Login/>} />
+						<Route path="/login" element={<LoginLayout />}>
+							<Route index element={<Login />} />
+							<Route path="register" element={<Register />} />
 						</Route>
 						<Route path="*" element={<NotFoundPage />} />
 					</Routes>
-				</div>
 			</AppContext.Provider>
 		</>
 	);

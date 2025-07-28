@@ -6,9 +6,10 @@
 }
 
 body{
-	@apply bg-blue-50
+	@apply bg-blue-50 overflow-x-hidden
 }
 
 a.active {
 	@apply opacity-70;
 }
+
