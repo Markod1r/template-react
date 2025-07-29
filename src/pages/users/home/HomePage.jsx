@@ -4,7 +4,6 @@ import Card from "../../../components/card/Card";
 import SecondaryButton from "../../../components/button/SecondaryButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { SecondaryHome } from "./SecondaryHome";
 
 export default function HomePage() {
 	const { car } = useContext(AppContext);
@@ -27,7 +26,7 @@ export default function HomePage() {
 					</p>
 					<SecondaryButton text={"Visit"} color="red" />
 				</section>
-				<section className="lg:flex-1 lg:m-0 mx-auto my-5 " data-aos="zoom-in">
+				<section className="lg:flex-1 lg:m-0 mx-auto my-5" data-aos="zoom-in">
 					<Card
 						title="My Car"
 						paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores vero quas rerum dolor,
@@ -36,8 +35,6 @@ export default function HomePage() {
 					/>
 				</section>
 			</div>
-
-			<SecondaryHome />
 		</>
 	);
 }

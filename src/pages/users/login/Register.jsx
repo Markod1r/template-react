@@ -2,7 +2,7 @@ import PrimaryButton from "../../../components/button/PrimaryButton";
 import { useContext } from "react";
 import { AppContext } from "../../../Context/Context";
 import { Link } from "react-router";
-import { BsChevronDoubleLeft } from "react-icons/bs";
+import { IoArrowBackCircleSharp } from "react-icons/io5";
 
 export default function Register() {
 	const { image } = useContext(AppContext);
@@ -13,7 +13,7 @@ export default function Register() {
 			</section>
 			<section className="flex-1 lg:p-10 p-8 my-auto overflow-x-hidden" data-aos="fade-left">
 				<Link to={"/"}>
-					<BsChevronDoubleLeft size={"27"} className="text-red-900" />
+					<IoArrowBackCircleSharp size={"45"} />
 				</Link>
 				<h1 className="lg:text-3xl text-center text-2xl mb-11 mt-7">Sign Up</h1>
 
