@@ -1,14 +1,39 @@
+<<<<<<< HEAD
 import Button from "../../components/button/Button";
+=======
+import PrimaryButton from "../../../components/PrimaryButton";
+import { useContext } from "react";
+import { AppContext } from "../../../contexts/context";
+import { Link } from "react-router";
+import { IoArrowBackCircleSharp } from "react-icons/io5";
+>>>>>>> selamatin-edit
 
 export default function Register() {
 	return (
 		<>
+<<<<<<< HEAD
 			<section className="m-auto lg:h-155 h-160 lg:w-185 w-85 rounded-2xl lg:p-10 p-8 my-18 shadow-2xl/30 bg-blue-100">
 				<h1 className="lg:text-3xl  text-2xl mb-11 mt-7">Sign Up</h1>
 				<form action="" className="flex flex-col">
 					<div className="flex lg:flex-row flex-col lg:gap-10 gap-4 m-auto">
 						<div className="flex flex-col gap-2">
 							<label for=""> &nbsp; &nbsp; First Name</label>
+=======
+			<section className="lg:flex-1 flex-0">
+				<img src={image} alt="gambar" className=" h-full object-cover mx-auto" />
+			</section>
+			<section className="flex-1 lg:p-10 p-8 my-auto overflow-x-hidden" data-aos="fade-left">
+				<Link to={"/"}>
+					<IoArrowBackCircleSharp size={"45"} className="active:scale-90" />
+				</Link>
+				<h1 className="lg:text-3xl text-center text-2xl mb-11 mt-7">Sign Up</h1>
+
+				<form action={""} className="flex flex-col">
+					<div className="flex lg:flex-row flex-col lg:gap-10 gap-0">
+						<div className="flex-1">
+							<label htmlFor="fname">First Name</label>
+							<br />
+>>>>>>> selamatin-edit
 							<input
 								type="text"
 								placeholder="first name"

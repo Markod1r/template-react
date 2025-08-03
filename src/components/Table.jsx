@@ -24,7 +24,7 @@ export default function Table({ col1 = "ID", col2 = "NAME", col3 = "JOB" }) {
 	);
 }
 
-function Row({ name, job }) {
+function Row({name, job}) {
 	return (
 		<tr className="bg-white border-b hover:bg-slate-100 sm:text-sm">
 			<td className="px-6 py-4">1</td>

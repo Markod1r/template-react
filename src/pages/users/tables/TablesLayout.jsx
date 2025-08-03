@@ -1,32 +1,21 @@
+import Navbar from "../../../components/Navbar";
 import { Outlet } from "react-router";
 import SideBar from "../../../components/SideBar";
-import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 
-export default function HomeLayout() {
+export default function TablesLayout() {
 	return (
 		<>
-<<<<<<< HEAD
-			<div>
-				<NavbarExample />
-			</div>
-
-			<div className="p-5">
-				<Outlet />
-=======
 			<div className="flex">
 				<SideBar />
-				<section className=" w-full">
+				<section className="w-full">
 					<Navbar />
 					<div className="p-5">
 						<Outlet />
 					</div>
 				</section>
->>>>>>> selamatin-edit
 			</div>
-			<div>
-				<Footer />
-			</div>
+			<Footer />
 		</>
 	);
 }
