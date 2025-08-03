@@ -1,8 +1,8 @@
-import PrimaryButton from "../../../components/button/PrimaryButton";
+import PrimaryButton from "../../../components/PrimaryButton";
 import { Link } from "react-router";
 import { useContext } from "react";
-import { AppContext } from "../../../Context/Context";
-import { BsChevronDoubleLeft } from "react-icons/bs";
+import { AppContext } from "../../../contexts/context";
+
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -10,17 +10,17 @@ import "aos/dist/aos.css";
 
 export default function Login() {
 	const { image } = useContext(AppContext);
-		useEffect(() => {
-			AOS.init({
-				duration: 1050,
-			});
-		}, []);
+	useEffect(() => {
+		AOS.init({
+			duration: 1050,
+		});
+	}, []);
 
 	return (
 		<>
 			<section className="flex-1 lg:p-15 p-10 my-auto " data-aos="fade-right">
 				<Link to={"/"}>
-					<IoArrowBackCircleSharp size={"45"} />
+					<IoArrowBackCircleSharp size={"45"} className="active:scale-90" />
 				</Link>
 				<h1 className="lg:text-3xl text-2xl text-center mb-7">Sign In</h1>
 				<form action="" className="flex flex-col lg:w-120 w-auto mx-auto">

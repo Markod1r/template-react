@@ -1,20 +1,23 @@
-import { useContext, useEffect } from "react";
-import { AppContext } from "../../../Context/Context";
-import Card from "../../../components/card/Card";
-import SecondaryButton from "../../../components/button/SecondaryButton";
+import { useEffect } from "react";
+import Card from "../../../components/Card";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SecondaryButton from "../../../components/SecondaryButton";
+import { useContext } from "react";
+import { AppContext } from "../../../contexts/context";
 
 export default function HomePage() {
-	const { car } = useContext(AppContext);
 	useEffect(() => {
 		AOS.init({
 			duration: 1050,
 		});
 	}, []);
+
+	const { car } = useContext(AppContext);
+
 	return (
 		<>
-			<div className="flex lg:flex-row md:flex-row flex-col h-130 w-full p-10">
+			<div className="flex lg:flex-row md:flex-row flex-col p-10">
 				<section className="flex-1 my-auto p-2" data-aos="fade-right">
 					<h2 className="lg:text-5xl text-3xl text-nowrap my-5 transform hover:rotate-2 transition-all">
 						Marcois <span className=" text-red-600">Ganteng</span>
