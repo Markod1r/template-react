@@ -4,7 +4,6 @@ import Card from "../../../components/card/Card";
 import SecondaryButton from "../../../components/button/SecondaryButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { SecondaryHome } from "./SecondaryHome";
 
 export default function HomePage() {
 	const { car } = useContext(AppContext);
@@ -36,8 +35,6 @@ export default function HomePage() {
 					/>
 				</section>
 			</div>
-
-			<SecondaryHome />
 		</>
 	);
 }

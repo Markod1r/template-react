@@ -5,11 +5,16 @@ import { Outlet } from "react-router";
 export default function HomeLayout() {
 	return (
 		<>
-			<NavbarExample />
+			<div>
+				<NavbarExample />
+			</div>
+
 			<div className="p-5">
 				<Outlet />
 			</div>
-			<Footer />
+			<div>
+				<Footer />
+			</div>
 		</>
 	);
 }
