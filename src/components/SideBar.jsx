@@ -8,7 +8,7 @@ import { IoReorderThreeOutline } from "react-icons/io5";
 import { useState } from "react";
 
 export default function SideBar() {
-	const [isOpen, setIsOpen] = useState(true);
+	const [isOpen, setIsOpen] = useState(false);
 
 	const handleClick = () => {
 		setIsOpen(!isOpen);
@@ -17,9 +17,9 @@ export default function SideBar() {
 	return (
 		<>
 			<div
-				className={`bg-linear-65 from-slate-900 to-slate-950 lg:w-90 md:w-70 w-10 h-screen ${
-					isOpen ? "sticky top-0" : "hidden"
-				} sticky top-0  p-3 `}
+				className={`bg-linear-50 from-gray-900 to-gray-950 via-slate-800 lg:w-90 md:w-70 w-10 h-screen p-3 ${
+					isOpen ? "lg:sticky top-0" : "lg:hidden"
+				} lg:block hidden`}
 			>
 				<div className="flex items-center gap-5 mt-5">
 					<FaReact size={40} className="text-white lg:text-3xl text-sm" />
@@ -47,7 +47,7 @@ export default function SideBar() {
 			</div>
 			<IoReorderThreeOutline
 				size={50}
-				className={`text-center lg:my-2 md:my-0 active:scale-85 ${
+				className={`text-center lg:my-2 md:my-0 active:scale-85 lg:block hidden ${
 					isOpen ? "rotate-90" : "rotate-0"
 				} transform transition-all cursor-pointer`}
 				onClick={handleClick}

@@ -20,7 +20,7 @@ export default function HomePage() {
 			<div className="flex lg:flex-row md:flex-row flex-col p-10">
 				<section className="flex-1 my-auto p-2" data-aos="fade-right">
 					<h2 className="lg:text-5xl text-3xl my-5 transform hover:rotate-2 transition-all">
-						Marcois <span className=" text-red-600">Ganteng</span>
+						Marcois <span className=" text-rose-500">Ganteng</span>
 					</h2>
 					<p className="lg:text-xl text-lg text-justify">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi harum ut tempore et

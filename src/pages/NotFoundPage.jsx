@@ -1,3 +1,6 @@
+import { TfiFaceSad } from "react-icons/tfi";
+import { Link } from "react-router";
+
 export default function NotFoundPage() {
 	return (
 		<div className="flex flex-col h-screen w-screen">

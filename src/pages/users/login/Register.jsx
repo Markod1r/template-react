@@ -28,6 +28,10 @@ export default function Register() {
 					</div>
 					<Input label={"Email"} placeholder={"email"} type={"text"} id={"email"} />
 					<Input label={"Password"} placeholder={"password"} type={"password"} id={"password"} />
+					<div className="flex flex-nowrap justify-center my-1">
+						<input type="checkbox" />
+						<span> I agree to terms & conditions</span>
+					</div>
 					<PrimaryButton text={"Register"} color="blue" />
 				</form>
 			</section>
