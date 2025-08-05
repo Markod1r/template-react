@@ -2,12 +2,9 @@ import { useEffect } from "react";
 import Card from "../../../components/Card";
 import AOS from "aos";
 import "aos/dist/aos.css";
-<<<<<<< HEAD
-=======
 import SecondaryButton from "../../../components/SecondaryButton";
 import { useContext } from "react";
 import { AppContext } from "../../../contexts/context";
->>>>>>> selamatin-edit
 
 export default function HomePage() {
 	useEffect(() => {
@@ -32,11 +29,7 @@ export default function HomePage() {
 					</p>
 					<SecondaryButton text={"Visit"} color="red" />
 				</section>
-<<<<<<< HEAD
-				<section className="lg:flex-1 lg:m-0 m-10 " data-aos="zoom-in">
-=======
 				<section className="lg:flex-1 lg:m-0 mx-auto my-5" data-aos="zoom-in">
->>>>>>> selamatin-edit
 					<Card
 						title="My Car"
 						paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores vero quas rerum dolor,

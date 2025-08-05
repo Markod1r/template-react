@@ -1,5 +1,3 @@
-import Button from "../button/PrimaryButton";
-
 export default function Card({ image, title = "T", paragraph = "p" }) {
 	return (
 		<div

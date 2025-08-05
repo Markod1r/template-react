@@ -6,14 +6,6 @@ import Footer from "../../../components/Footer";
 export default function HomeLayout() {
 	return (
 		<>
-<<<<<<< HEAD
-			<div>
-				<NavbarExample />
-			</div>
-
-			<div className="p-5">
-				<Outlet />
-=======
 			<div className="flex">
 				<SideBar />
 				<section className=" w-full">
@@ -22,7 +14,6 @@ export default function HomeLayout() {
 						<Outlet />
 					</div>
 				</section>
->>>>>>> selamatin-edit
 			</div>
 			<div>
 				<Footer />
