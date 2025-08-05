@@ -4,14 +4,26 @@ import { RiProfileLine } from "react-icons/ri";
 import { GoProjectSymlink } from "react-icons/go";
 import { TbTableShare } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
+import { IoReorderThreeOutline } from "react-icons/io5";
+import { useState } from "react";
 
 export default function SideBar() {
+	const [isOpen, setIsOpen] = useState(true);
+
+	const handleClick = () => {
+		setIsOpen(!isOpen);
+	};
+
 	return (
 		<>
-			<div className="bg-linear-65 from-slate-900 to-slate-950 lg:w-90 md:w-70 w-10 h-screen sticky top-0  p-3 ">
+			<div
+				className={`bg-linear-65 from-slate-900 to-slate-950 lg:w-90 md:w-70 w-10 h-screen ${
+					isOpen ? "sticky top-0" : "hidden"
+				} sticky top-0  p-3 `}
+			>
 				<div className="flex items-center gap-5 mt-5">
-					<FaReact size={45} className="text-white lg:text-3xl text-sm" />
-					<h1 className="lg:text-3xl text-xl text-white">SideBar</h1>
+					<FaReact size={40} className="text-white lg:text-3xl text-sm" />
+					<h1 className="lg:text-2xl text-xl text-white">SideBar</h1>
 				</div>
 				<div className="bg-amber-50 h-0.5 rounded my-7" />
 				<ul className="flex flex-col ml-5 gap-5 text-white">
@@ -33,6 +45,13 @@ export default function SideBar() {
 					</li>
 				</ul>
 			</div>
+			<IoReorderThreeOutline
+				size={50}
+				className={`text-center lg:my-2 md:my-0 active:scale-85 ${
+					isOpen ? "rotate-90" : "rotate-0"
+				} transform transition-all cursor-pointer`}
+				onClick={handleClick}
+			/>
 		</>
 	);
 }

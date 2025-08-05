@@ -5,7 +5,7 @@ export default function Navbar() {
 		<>
 			<header className="lg:h-17 sm:h-12 h-13 w-full flex justify-between">
 				<Link
-					className="hover:opacity-70 active:scale-90 lg:text-2xl text-base my-auto mx-10 text-black font-semibold cursor-pointer "
+					className="hover:opacity-70 active:scale-90 lg:text-2xl text-base my-auto mx-5 text-black font-semibold cursor-pointer "
 					to={"/"}
 				>
 					Navbar

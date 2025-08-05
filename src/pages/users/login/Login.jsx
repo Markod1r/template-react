@@ -36,7 +36,7 @@ export default function Login() {
 					/>
 					<br />
 					<PrimaryButton text={"Login"} color="blue" />
-					<p className="text-xl">
+					<p className="text-lg text-center mt-10">
 						don't have an account?{" "}
 						<Link to={"/login/register"} className="font-bold">
 							Sign Up

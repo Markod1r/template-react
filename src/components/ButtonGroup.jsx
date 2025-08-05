@@ -6,10 +6,10 @@ export default function ButtonGroup({ onEdit, onDelete }) {
 		<>
 			<div class="inline-flex rounded-md shadow-xs gap-5">
 				<button type="button" onClick={onEdit}>
-					<FaRegEdit size={24} className="text-sky-500 active:scale-85 " />
+					<FaRegEdit size={24} className="text-sky-500 active:scale-85 cursor-pointer" />
 				</button>
 				<button type="button" onClick={onDelete}>
-					<MdDelete size={24} className="text-rose-500 active:scale-85" />
+					<MdDelete size={24} className="text-rose-500 active:scale-85 cursor-pointer" />
 				</button>
 			</div>
 		</>
