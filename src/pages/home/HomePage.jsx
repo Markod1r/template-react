@@ -1,10 +1,9 @@
 import { useEffect } from "react";
-import Card from "../../../components/Card";
 import AOS from "aos";
-import "aos/dist/aos.css";
-import SecondaryButton from "../../../components/SecondaryButton";
 import { useContext } from "react";
-import { AppContext } from "../../../contexts/context";
+import { AppContext } from "../../contexts/context";
+import SecondaryButton from "./../../components/SecondaryButton";
+import Card from "./../../components/Card";
 
 export default function HomePage() {
 	useEffect(() => {
@@ -17,10 +16,11 @@ export default function HomePage() {
 
 	return (
 		<>
-			<div className="flex lg:flex-row md:flex-row flex-col p-10">
-				<section className="flex-1 my-auto p-2" data-aos="fade-right">
-					<h2 className="lg:text-5xl text-3xl my-5 transform hover:rotate-2 transition-all">
-						Marcois <span className=" text-rose-500">Ganteng</span>
+			<div className="grid grid-cols-1 lg:grid-cols-2 p-10">
+				<section className="my-auto p-2" data-aos="fade-right">
+					<h2 className="lg:text-5xl text-3xl my-5 transform hover:rotate-2 transition-all flex">
+						Marcois
+						<span className="text-rose-500"> Ganteng</span>
 					</h2>
 					<p className="lg:text-xl text-lg text-justify">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi harum ut tempore et
@@ -29,7 +29,7 @@ export default function HomePage() {
 					</p>
 					<SecondaryButton text={"Visit"} color="red" />
 				</section>
-				<section className="lg:flex-1 lg:m-0 mx-auto my-5" data-aos="zoom-in">
+				<section className="mx-auto my-5" data-aos="zoom-in">
 					<Card
 						title="My Car"
 						paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores vero quas rerum dolor,

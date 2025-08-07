@@ -8,16 +8,17 @@ import Image from "./assets/example.jpg";
 import car from "./assets/car.jpg";
 
 //Layouts
-import HomeLayout from "./pages/users/home/HomeLayout";
 import LoginLayout from "./pages/users/login/LoginLayout";
 import TablesLayout from "./pages/users/tables/TablesLayout";
 
 // Pages
-import HomePage from "./pages/users/home/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Login from "./pages/users/login/Login";
 import Register from "./pages/users/login/Register";
 import TablesPage from "./pages/users/tables/TablesPage";
+import UserLayout from "./pages/users/UserLayout";
+import Table from "./components/Table";
+import HomePage from "./pages/home/HomePage";
 
 function App() {
 	const dataContext = {
@@ -30,17 +31,10 @@ function App() {
 		<>
 			<AppContext.Provider value={dataContext}>
 				<Routes>
-					<Route path="/" element={<HomeLayout />}>
-						<Route index element={<HomePage />} />
+					<Route path="/" element={<HomePage />} />
+					<Route path="user" element={<UserLayout />}>
+						<Route path="Table" element={<Table />} />
 					</Route>
-					<Route path="/tables" element={<TablesLayout />}>
-						<Route index element={<TablesPage />} />
-					</Route>
-					<Route path="/login" element={<LoginLayout />}>
-						<Route index element={<Login />} />
-						<Route path="register" element={<Register />} />
-					</Route>
-					<Route path="*" element={<NotFoundPage />} />
 				</Routes>
 			</AppContext.Provider>
 		</>

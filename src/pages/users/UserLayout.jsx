@@ -1,9 +1,9 @@
+import Navbar from "./../../components/Navbar";
+import SideBar from "./../../components/SideBar";
 import { Outlet } from "react-router";
-import SideBar from "../../../components/SideBar";
-import Navbar from "../../../components/Navbar";
-import Footer from "../../../components/Footer";
+import Footer from "./../../components/Footer";
 
-export default function HomeLayout() {
+export default function UserLayout() {
 	return (
 		<>
 			<div className="flex">
