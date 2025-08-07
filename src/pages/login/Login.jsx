@@ -1,10 +1,10 @@
-import PrimaryButton from "../../../components/PrimaryButton";
+import PrimaryButton from "../../components/PrimaryButton";
 import { Link } from "react-router";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import { useContext, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { AppContext } from "../../../contexts/context";
+import { AppContext } from "../../contexts/context";
 
 export default function Login() {
 	const { image } = useContext(AppContext);
@@ -38,7 +38,7 @@ export default function Login() {
 					<PrimaryButton text={"Login"} color="blue" />
 					<p className="text-lg text-center mt-10">
 						don't have an account?{" "}
-						<Link to={"/login/register"} className="font-bold">
+						<Link to={"/register"} className="font-bold">
 							Sign Up
 						</Link>
 					</p>

@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { AppContext } from "../../contexts/context";
 import SecondaryButton from "./../../components/SecondaryButton";
 import Card from "./../../components/Card";
+import Navbar from "../../components/Navbar";
+import Footer from "./../../components/Footer";
 
 export default function HomePage() {
 	useEffect(() => {
@@ -16,28 +18,20 @@ export default function HomePage() {
 
 	return (
 		<>
-			<div className="grid grid-cols-1 lg:grid-cols-2 p-10">
-				<section className="my-auto p-2" data-aos="fade-right">
-					<h2 className="lg:text-5xl text-3xl my-5 transform hover:rotate-2 transition-all flex">
-						Marcois
-						<span className="text-rose-500"> Ganteng</span>
-					</h2>
-					<p className="lg:text-xl text-lg text-justify">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi harum ut tempore et
-						facilis natus dignissimos recusandae provident! Id nisi cupiditate, molestias vitae
-						repudiandae est nesciunt assumenda? Molestiae, laboriosam nostrum!
-					</p>
-					<SecondaryButton text={"Visit"} color="red" />
-				</section>
-				<section className="mx-auto my-5" data-aos="zoom-in">
-					<Card
-						title="My Car"
-						paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores vero quas rerum dolor,
-						corporis maxime reprehenderit magnam consequatur nisi earum!"
-						image={car}
-					/>
-				</section>
-			</div>
+			<Navbar />
+			<section className="grid grid-cols-1 lg:grid-cols-3 lg:gap-10 gap-5 lg:mx-35 md:mx-15 mx-10 lg:my-25 my-10">
+				<div className="bg-gray-800 rounded-2xl w-full h-100 my-auto md:col-span-2 col-span-1"></div>
+				<div className="bg-gray-800 rounded-2xl w-full h-100 my-auto"></div>
+			</section>
+			<section className="grid grid-cols-1 lg:grid-cols-4 lg:gap-10 gap-5 lg:mx-35 md:mx-15 mx-10 lg:my-25 my-10">
+				<div className="bg-gray-800 rounded-2xl w-full h-100 my-auto col-span-2"></div>
+				<div className=" h-100 my-auto col-span-2 grid grid-cols-2 lg:gap-10 gap-5">
+					<div className="bg-gray-800 rounded-2xl w-full h-full col-span-2"></div>
+					<div className="bg-gray-800 rounded-2xl "></div>
+					<div className="bg-gray-800 rounded-2xl "></div>
+				</div>
+			</section>
+			<Footer />
 		</>
 	);
 }

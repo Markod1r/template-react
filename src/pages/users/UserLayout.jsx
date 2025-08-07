@@ -3,7 +3,7 @@ import SideBar from "./../../components/SideBar";
 import { Outlet } from "react-router";
 import Footer from "./../../components/Footer";
 
-export default function UserLayout() {
+export default function FormLayout() {
 	return (
 		<>
 			<div className="flex">

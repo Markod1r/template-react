@@ -8,17 +8,18 @@ import Image from "./assets/example.jpg";
 import car from "./assets/car.jpg";
 
 //Layouts
-import LoginLayout from "./pages/users/login/LoginLayout";
+import LoginLayout from "./pages/login/LoginLayout";
 import TablesLayout from "./pages/users/tables/TablesLayout";
+import FormLayout from "./pages/login/LoginLayout";
 
 // Pages
-import NotFoundPage from "./pages/NotFoundPage";
-import Login from "./pages/users/login/Login";
-import Register from "./pages/users/login/Register";
+import Login from "./pages/login/Login";
+import Register from "./pages/login/Register";
 import TablesPage from "./pages/users/tables/TablesPage";
 import UserLayout from "./pages/users/UserLayout";
 import Table from "./components/Table";
 import HomePage from "./pages/home/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
 	const dataContext = {
@@ -35,6 +36,9 @@ function App() {
 					<Route path="user" element={<UserLayout />}>
 						<Route path="Table" element={<Table />} />
 					</Route>
+					<Route path="login" element={<Login />} />
+					<Route path="register" element={<Register />} />
+					<Route path="*" elment={<NotFoundPage />} />
 				</Routes>
 			</AppContext.Provider>
 		</>

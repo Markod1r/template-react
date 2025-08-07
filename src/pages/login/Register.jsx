@@ -1,6 +1,6 @@
-import PrimaryButton from "../../../components/PrimaryButton";
+import PrimaryButton from "../../components/PrimaryButton";
 import { useContext } from "react";
-import { AppContext } from "../../../contexts/context";
+import { AppContext } from "../../contexts/context";
 import { Link } from "react-router";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 
