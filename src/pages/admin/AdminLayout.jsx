@@ -9,16 +9,19 @@ export default function AdminLayout() {
 
   return (
     <>
-      <div className="flex">
-        <div>
-          <SideBar isOpen={isOpen} />
+      <div className="grid grid-cols-12">
+        <NavbarAdmin
+          setIsOpen={setIsOpen}
+          isOpen={isOpen}
+          col={"col-span-12"}
+        />
+        <SideBar isOpen={isOpen} col={"col-span-2"} />
+        <div className="col-span-10">
+          <div className="">
+            <Outlet />
+          </div>
         </div>
-        <section className="w-full">
-          <NavbarAdmin setIsOpen={setIsOpen} isOpen={isOpen} />
-          <Outlet />
-        </section>
       </div>
-      <Wave />
     </>
   );
 }

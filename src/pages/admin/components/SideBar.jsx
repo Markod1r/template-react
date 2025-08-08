@@ -3,15 +3,13 @@ import { MdDashboard } from "react-icons/md";
 import { RiProfileLine } from "react-icons/ri";
 import { GoProjectSymlink } from "react-icons/go";
 import { TbTableShare } from "react-icons/tb";
-import { FaReact } from "react-icons/fa";
-import { IoReorderThreeOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
-export default function SideBar({ isOpen }) {
+export default function SideBar({ isOpen, col }) {
   return (
     <>
       <aside
         className={`h-screen w-10 bg-slate-100 p-3 md:w-70 lg:w-60 ${
-          isOpen ? "top-0 lg:sticky" : "lg:hidden"
+          isOpen ? `${col}` : "lg:hidden"
         }`}
       >
         <div className="mt-3 mb-9 flex items-center gap-5">
@@ -29,7 +27,7 @@ export default function SideBar({ isOpen }) {
           </Li>
           <Li>
             <TbTableShare className="text-yellow-500" />
-            <NavLink to="/tables">Tables</NavLink>
+            <NavLink to="/admin/tables">Tables</NavLink>
           </Li>
           <Li>
             <RiProfileLine className="text-fuchsia-400" />

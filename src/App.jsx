@@ -17,6 +17,7 @@ import Register from "./pages/login/Register";
 import HomePage from "./pages/home/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import DashboardAdmin from "./pages/admin/DashboardAdmin";
+import TablesAdmin from "./pages/admin/tables/TablesAdmin";
 
 function App() {
   const dataContext = {
@@ -33,6 +34,7 @@ function App() {
           <Route path="user" element={<UserLayout />}></Route>
           <Route path="admin" element={<AdminLayout />}>
             <Route index element={<DashboardAdmin />} />
+            <Route path="tables" element={<TablesAdmin />} />
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
