@@ -22,18 +22,9 @@ export default function Login() {
 				</Link>
 				<h1 className="lg:text-3xl text-2xl text-center mb-7">Sign In</h1>
 				<form action="" className="flex flex-col lg:w-120 w-auto mx-auto">
-					<label htmlFor="username">Username</label>
-					<input
-						type="text"
-						placeholder="username"
-						className="text-xl focus:outline-0 focus:border-zinc-900 border-b-3 border-zinc-400 my-3"
-					/>
-					<label htmlFor="password">password</label>
-					<input
-						type="password"
-						placeholder="password"
-						className="text-xl focus:outline-0 focus:border-zinc-900 border-b-3 border-zinc-400 my-3"
-					/>
+					<Input label={"Username"} id={"username"} type={"text"} placeholder={"username"} />
+					<Input label={"Password"} id={"password"} type={"text"} placeholder={"password"} />
+
 					<br />
 					<PrimaryButton text={"Login"} color="blue" />
 					<p className="text-lg text-center mt-10">
@@ -48,5 +39,19 @@ export default function Login() {
 				<img src={image} alt="gambar" className="h-screen" />
 			</section>
 		</div>
+	);
+}
+
+function Input({ label, id, type, placeholder }) {
+	return (
+		<>
+			<label htmlFor={id}>{label}</label>
+			<input
+				id={id}
+				type={type}
+				placeholder={placeholder}
+				className="text-xl outline-2 focus:outline-3 rounded transform transition-all  my-3 py-1 px-2"
+			/>
+		</>
 	);
 }

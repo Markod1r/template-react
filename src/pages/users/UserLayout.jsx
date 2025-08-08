@@ -2,6 +2,7 @@ import Navbar from "./../../components/Navbar";
 import SideBar from "./../../components/SideBar";
 import { Outlet } from "react-router";
 import Footer from "./../../components/Footer";
+import { Wave } from "./../../components/Wave";
 
 export default function FormLayout() {
 	return (
