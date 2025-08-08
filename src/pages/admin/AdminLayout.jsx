@@ -5,9 +5,8 @@ import SideBar from "./components/SideBar";
 import { useState } from "react";
 
 export default function AdminLayout() {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    
   return (
     <>
       <div className="flex">
@@ -16,9 +15,7 @@ export default function AdminLayout() {
         </div>
         <section className="w-full">
           <NavbarAdmin setIsOpen={setIsOpen} isOpen={isOpen} />
-          <div className="p-5">
-            <Outlet />
-          </div>
+          <Outlet />
         </section>
       </div>
       <Wave />

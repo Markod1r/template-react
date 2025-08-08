@@ -5,7 +5,7 @@ import { GoProjectSymlink } from "react-icons/go";
 import { TbTableShare } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
 import { IoReorderThreeOutline } from "react-icons/io5";
-
+import { CgProfile } from "react-icons/cg";
 export default function SideBar({ isOpen }) {
   return (
     <>
@@ -14,13 +14,18 @@ export default function SideBar({ isOpen }) {
           isOpen ? "top-0 lg:sticky" : "lg:hidden"
         }`}
       >
-        <div className="my-5 flex items-center">
-          <h1 className="text-xl text-blue-900 lg:text-xl">Pages</h1>
+        <div className="mt-3 mb-9 flex items-center gap-5">
+          <CgProfile size={40} className="text-blue-950" />
+          <h1 className="text-xl font-bold text-blue-900 lg:text-xl">Admin</h1>
         </div>
+
+        <h1 className="my-5 text-xl font-semibold text-blue-900 lg:text-xl">
+          Pages
+        </h1>
         <ul className="ml-5 flex flex-col gap-5 text-blue-900">
           <Li>
             <MdDashboard className="text-sky-500" />
-            <NavLink to="/dashboard">Dashboard</NavLink>
+            <NavLink to="/admin">Dashboard</NavLink>
           </Li>
           <Li>
             <TbTableShare className="text-yellow-500" />

@@ -20,7 +20,7 @@ export default function NavbarAdmin({ setIsOpen, isOpen }) {
           />
           <Link
             className="mx-4 my-auto cursor-pointer text-base font-semibold text-shadow-lg hover:opacity-70 active:scale-90 lg:text-2xl"
-            to={"/"}
+            to={"/admin"}
           >
             Navbar
           </Link>
