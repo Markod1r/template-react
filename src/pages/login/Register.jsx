@@ -1,56 +1,90 @@
 import PrimaryButton from "../../components/PrimaryButton";
-import { useContext } from "react";
+import { useContext} from "react";
 import { AppContext } from "../../contexts/context";
-import { Link } from "react-router";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
+import { useNavigate } from "react-router";
 
 export default function Register() {
-	const { image } = useContext(AppContext);
-	return (
-		<div className="flex">
-			<section className="lg:flex-1 flex-0 ">
-				<img src={image} alt="gambar" className="h-screen object-cover mx-auto" />
-			</section>
-			<section className="flex-1 lg:p-20 p-8 my-auto overflow-x-hidden">
-				<Link to={"/"}>
-					<IoArrowBackCircleSharp size={"45"} className="active:scale-90" />
-				</Link>
-				<h1 className="lg:text-3xl text-center text-2xl mb-11 mt-7">Sign Up</h1>
+  const { image } = useContext(AppContext);
+  const navigate = useNavigate();
 
-				<form action="" className="flex flex-col text-lg">
-					<div className="flex gap-5">
-						<div className="flex flex-col flex-1">
-							<Input label={"First Name"} placeholder={"first name"} type={"text"} id={"fname"} />
-						</div>
-						<div className="flex flex-col flex-1">
-							<Input label={"Last Name"} placeholder={"last name"} type={"text"} id={"lname"} />
-						</div>
-					</div>
-					<Input label={"Email"} placeholder={"email"} type={"text"} id={"email"} />
-					<Input label={"Password"} placeholder={"password"} type={"password"} id={"password"} />
-					<div className="flex flex-nowrap justify-center my-1">
-						<input type="checkbox" />
-						<span> I agree to terms & conditions</span>
-					</div>
-					<PrimaryButton text={"Register"} color="blue" />
-				</form>
-			</section>
-		</div>
-	);
+  return (
+    <div className="flex">
+      <section
+        className="my-auto grid flex-1 grid-cols-2 overflow-x-hidden p-8 lg:p-20"
+      >
+        <button className="w-0 cursor-pointer" onClick={() => navigate(-1)}>
+          <IoArrowBackCircleSharp
+            size={"45"}
+            className="hover:scale-108 active:scale-90"
+          />
+        </button>
+        <h1 className="col-span-2 mt-7 mb-11 text-center text-2xl lg:text-3xl">
+          Sign Up
+        </h1>
+
+        <form action="" className="col-span-2 grid text-lg">
+          <div className="grid grid-cols-2 gap-10">
+            <div className="flex flex-col">
+              <Input
+                className="bg-amber-500"
+                label={"First Name"}
+                placeholder={"first name"}
+                type={"text"}
+                id={"fname"}
+              />
+            </div>
+            <div className="flex flex-col">
+              <Input
+                label={"Last Name"}
+                placeholder={"last name"}
+                type={"text"}
+                id={"lname"}
+              />
+            </div>
+          </div>
+          <Input
+            label={"Email"}
+            placeholder={"email"}
+            type={"text"}
+            id={"email"}
+          />
+          <Input
+            label={"Password"}
+            placeholder={"password"}
+            type={"password"}
+            id={"password"}
+          />
+          <div className="my-1 flex flex-nowrap justify-center">
+            <input type="checkbox" />
+            <span> I agree to terms & conditions</span>
+          </div>
+          <PrimaryButton text={"Register"} color="blue" />
+        </form>
+      </section>
+      <section className="flex-0 lg:flex-1">
+        <img
+          src={image}
+          alt="gambar"
+          className="mx-auto h-screen object-cover"
+        />
+      </section>
+    </div>
+  );
 }
 
 const Input = ({ label, type, id, placeholder }) => {
-	return (
-		<>
-			<label htmlFor={id} className="mb-1 mt-1">
-				{label}
-			</label>
-			<input
-				className="p-2 outline-2 rounded-xl focus:outline-3 transform transition-all mb-3"
-				type={type}
-				id={id}
-				placeholder={placeholder}
-			/>
-		</>
-	);
+  return (
+    <>
+      <label htmlFor={id} className="mt-1 mb-1">
+        {label}
+      </label>
+      <input
+        className="mb-3 transform rounded-xl p-2 outline-2 transition-all focus:outline-3"
+        type={type}
+        id={id}
+        placeholder={placeholder}
+      />
+    </>
+  );
 };

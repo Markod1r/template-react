@@ -22,27 +22,27 @@ import HomePage from "./pages/home/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
-	const dataContext = {
-		logo: reactLogo,
-		image: Image,
-		car: car,
-	};
+  const dataContext = {
+    logo: reactLogo,
+    image: Image,
+    car: car,
+  };
 
-	return (
-		<>
-			<AppContext.Provider value={dataContext}>
-				<Routes>
-					<Route path="/" element={<HomePage />} />
-					<Route path="user" element={<UserLayout />}>
-						<Route path="Table" element={<Table />} />
-					</Route>
-					<Route path="login" element={<Login />} />
-					<Route path="register" element={<Register />} />
-					<Route path="*" element={<NotFoundPage />} />
-				</Routes>
-			</AppContext.Provider>
-		</>
-	);
+  return (
+    <>
+      <AppContext.Provider value={dataContext}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="user" element={<UserLayout />}>
+            <Route path="Table" element={<Table />} />
+          </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </AppContext.Provider>
+    </>
+  );
 }
 
 export default App;
