@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import SecondaryButton from "./SecondaryButton";
 
 export default function Navbar() {
@@ -15,6 +15,17 @@ export default function Navbar() {
         >
           Navbar
         </Link>
+        <ul className="flex items-center gap-10 text-lg">
+          <li>
+            <NavLink>Home</NavLink>
+          </li>
+          <li>
+            <NavLink>Profile</NavLink>
+          </li>
+          <li>
+            <NavLink>About</NavLink>
+          </li>
+        </ul>
         <SecondaryButton
           color="white"
           text={"Login"}
