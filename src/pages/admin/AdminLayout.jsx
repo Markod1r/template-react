@@ -15,9 +15,10 @@ export default function AdminLayout() {
           isOpen={isOpen}
           col={"col-span-12"}
         />
-        <SideBar isOpen={isOpen} col={"col-span-2"} />
+        <SideBar isOpen={isOpen} col={"lg:col-span-2 col-span-1 block"} />
         <div className="col-span-10">
-          <div className="">
+          <div>
+            <Wave />
             <Outlet />
           </div>
         </div>

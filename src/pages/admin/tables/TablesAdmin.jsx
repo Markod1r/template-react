@@ -7,7 +7,7 @@ export default function TablesAdmin({
 }) {
   return (
     <>
-      <main className="h-full items-center p-10">
+      <main className="col-span-10 h-full items-center p-10">
         <div className="w-1/2 overflow-x-auto rounded-lg shadow-lg/10">
           <table className="w-full text-left text-sm text-gray-500">
             <thead className="bg-gray-200 text-xs text-gray-700 uppercase">
